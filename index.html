@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendulum Test!</title>
+</head>
+
+<body>
+  <div id="box">
+    <div id="pendulum"></div>
+  </div>
+  <style>
+    body {
+      display: grid;
+      place-items: center;
+      height: 100vh;
+    }
+
+    #box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      display: grid;
+      place-items: center;
+    }
+
+    #pendulum {
+      width: 10px;
+      height: 100%;
+      border: 1px solid blue;
+      animation-name: swing;
+      animation-duration: 1.2s;
+      animation-timing-function: ease-in-out;
+      animation-delay: 100ms;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-play-state: running;
+      transform-origin: top center;
+    }
+
+    @keyframes swing {
+      from {
+        transform: rotate(-30deg);
+      }
+
+      to {
+        transform: rotate(30deg);
+      }
+    }
+  </style>
+  <!-- * COOL! Kinda want to build a metronome! -->
+</body>
+
+</html>
